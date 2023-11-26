@@ -1,0 +1,33 @@
+#Simple web stack
+
+https://imgur.com/UPF7qmV
+
+##What is a server
+Servers encompass physical machines, virtual machines, or software programs that deliver services or functionalities to other programs or devices referred to as "clients." The term "server" originates from queuing theory, specifically Kendall's notation, drawing parallels with how servers handle client requirements, akin to how telephone operators, chefs, or production machines process incoming orders while considering capacity and service process time.
+
+A computer has the capability to act as a server, and vice versa—both constructed with a combination of hardware and software. The primary distinction lies in the enhanced capacity and computational power possessed by servers. Essentially, servers can be seen as computers with heightened processing capabilities, often housed in racks within data centers, where servers are stacked on top of one another.
+
+In contrast, virtual servers operate more like virtual machines or computers, representing a digital emulation of physical servers. These virtual entities have their own operating systems and applications, as elucidated by Posey in 2021.
+
+##What is the role of the domain name
+The role of the domain name is to replace complex IP addresses numbers into easily understandable names so humans can remember and communicate them in a better way.
+
+##What type of DNS record www is in www.foobar.com
+The DNS record for "www" in "www.foobar.com" is typically a subdomain record.
+
+##What is the role of the web server
+The main function of a Web server is to store the files of a site and broadcast them over the Internet so that they can be visited by users. Basically, a web server is a large computer that stores and transmits data via the network system called the Internet. When a user enters an Internet page, his browser communicates with the server sending and receiving data that determines what he sees on the screen. Therefore, we say that Web servers are to store and transmit data from a site as requested by a visitor’s browser.
+
+##What is the role of the application server
+The application server acts as an intermediary between a user's web browser and the back-end components of a web application. Its key functions include processing user requests, executing business logic, interacting with databases, formatting data for display, managing security and access control, handling user sessions, integrating with external services, collaborating with web servers, and contributing to the scalability of the web application. Overall, the application server plays a pivotal role in enabling the dynamic and interactive features of modern web applications.
+
+##What is the role of the database
+The role of the database is to make the information gathered organized so it can be easily accessed, managed and updated. However, not all database management systems work the same, and the mechanisms they use to organize data can vary, ranging from relational database to object-oriented database, distributed database or cloud database. Next, some of its main differences:
+
+##What is the server using to communicate with the computer of the user requesting the website
+The server communicates with the computer of the user requesting the website using the Hypertext Transfer Protocol (HTTP). This protocol enables the transfer of resources and data, such as HTML documents, between the server and the client (user's browser). The communication involves the client initiating requests, which are typically made through a web browser, and the server responding with the requested data. This exchange of requests and responses forms the basis for the interaction between the user's device and the server, allowing the display of web content on the user's browser.
+
+##Issues with the simple web infrastructure
+One of the issues of having a simple web infrastructure, has to do with the SPOF (Single Point of Failure) where if component of the system fails, there is no backup that can support the continuity of the functionality of the system, bringing the whole system to a collapse by being unable to operate.
+Also, whenever some structure or node in the system needs to be repaired, the whole system has to be shut down, while the maintenance is done. Then, client requests cannot be attended during this period of time.
+Overload of traffic can be a risk to the server capacity. This, because there is no possibility to scale the service with additional servers as backup. Leading to a possible breakdown of the web page and client requests, as traffic surpasess servers capacity.
