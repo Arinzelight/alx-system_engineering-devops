@@ -2,8 +2,8 @@
 # Configure your Nginx server so that /redirect_me is redirecting to another page.
 # The redirection is configured as a "301 Moved Permanently"
 
-apt-get update
-apt-get install nginx
+apt update
+apt install nginx
 
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
