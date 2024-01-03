@@ -1,25 +1,8 @@
 #!/usr/bin/env bash
+# Install nginx on your web-01 server
 
-# Bash script to install and configure Nginx on an Ubuntu machine
-
-
-sudo apt-get update
-sudo apt-get install -y nginx
-
-
-sudo bash -c 'echo "server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    root /var/www/html;
-    index index.html;
-    server_name _;
-    location / {
-        try_files \$uri \$uri/ =404;
-        echo \"Hello World!\" > /var/www/html/index.html;
-    }
-}" > /etc/nginx/sites-available/default'
-
-
-sudo service nginx stop
-sudo service nginx start
-
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo 'Hello World!' > /var/www/html/index.html
+service nginx start
