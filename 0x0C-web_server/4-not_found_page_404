@@ -10,7 +10,7 @@ PATTERN="#error_page 404 /404.html;"
 
 
 sudo apt-get update
-sudo apt-get install  nginx
+sudo apt-get install nginx -y
 sudo chown -R ubuntu /var/www
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sudo sed -i "30i $ADD301_REDIRECT" /etc/nginx/sites-available/default
