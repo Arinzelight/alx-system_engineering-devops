@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# what’s keeping your Ubuntu container’s Nginx installation from listening on port 8?
 # configures nginx to run and listen to port 80
 
+# remove the default nginx configuration file
 rm /etc/nginx/sites-enabled/default
+# confgure nginx to listen on port 80 for all active Ipv4 IPs
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
