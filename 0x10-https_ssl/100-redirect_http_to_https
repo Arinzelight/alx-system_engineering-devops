@@ -33,19 +33,20 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend clickviral-frontend
+frontend www-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend clickviral-backend
+        default_backend www-backend
 
-frontend clickviral-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
+frontend www-frontend-https
+        bind *:443 ssl crt /etc/letsencrypt/live/www.michaelharry.tech/www.michaelharry.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend clickviral-backend
+        default_backend www-backend
 
-backend clickviral-backend
+backend www-backend
         balance roundrobin
         server 429852-web-01 34.207.64.162:80 check
-  	server 429852-web-02 52.201.221.50:80 check
+        server 429852-web-02 52.201.221.50:80 check
+~

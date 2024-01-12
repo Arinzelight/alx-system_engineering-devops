@@ -34,14 +34,14 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 frontend www-frontend
-        bind 0.0.0.0:80
+        bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
         default_backend www-backend
 
 frontend www-frontend-https
-        bind 0.0.0.0:443 ssl crt /etc/letsencrypt/live/www.michaelharry.tech/fullchain.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.michaelharry.tech/www.michaelharry.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend www-backend
 
