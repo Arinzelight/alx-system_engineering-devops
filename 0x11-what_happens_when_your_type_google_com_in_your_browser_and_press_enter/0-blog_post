@@ -1,0 +1,33 @@
+
+Title: What happens when you type google.com in your browser and press Enter
+
+
+Introduction:
+In order to comprehend the intricate process that unfolds when one types "google.com" in their browser and hits Enter, it is essential to grasp the fundamentals of the client-server model. This model involves our computer (as the client) communicating with the Google server to receive the requested webpage. The interaction goes beyond a simple exchange between client and server, as various layers intervene in this client-server model.
+
+The Role of DNS Server:
+When entering the URL "www.google.com" into a browser and hitting 'Enter,' the browser initiates the breakdown of the URL. Focusing on the "google.com" domain name, it is crucial to understand the significance of an IP address, which serves as a unique identifier for computers on the internet. The Domain Name System (DNS) plays a pivotal role in translating domain names into IP addresses, facilitating seamless communication between clients and servers. The DNS request travels through the resolver, the root server, TLD server, and Authoritative Name Servers before reaching the desired IP address.
+
+Protocols: TCP/IP:
+While domain names represent IP addresses, the Internet Protocol Suite, often referred to as TCP/IP, encompasses various protocols governing interactions between servers and clients. This suite, which includes the Transmission Control Protocol (TCP), establishes rules for data transfer, packet handling, and overall network communication.
+
+Firewall Protection:
+To safeguard servers from potential threats and attacks, firewalls are deployed. These software programs regulate incoming and outgoing network traffic, evaluating whether a requested IP address poses a security risk. Browsers may also feature firewalls to detect potentially malicious IP addresses obtained through DNS requests.
+
+HTTPS/SSL for Security and Encryption:
+After obtaining the IP address, the browser addresses the "https://" component of the URL. HyperText Transfer Protocol Secure (HTTPS) ensures secure data transfer between browsers and websites. SSL certificates, issued by trusted authorities, add an extra layer of security by encrypting the communication. Users can verify the security status through indicators like a lock icon in the browser's address bar.
+
+Load Balancer:
+Websites, particularly those experiencing high traffic, employ load balancers to distribute network requests among multiple servers. Load-balancing algorithms, such as round-robin or least-connection, ensure even distribution and prevent a single point of failure.
+
+Web Server:
+Requests reaching the servers are processed by web servers like Nginx or Apache. These servers serve static content, such as HTML pages and images, as HTTP or HTTPS responses.
+
+Application Server:
+Dynamic websites rely on application servers to handle interactions, manage databases, and operate applications. Application servers work in conjunction with web servers to deliver dynamic content based on user interactions.
+
+Database Management System (DBMS):
+The final layer involves the Database Management System (DBMS), which interacts with databases to retrieve, add, and modify data. Relational databases like MySQL and PostgreSQL, as well as non-relational databases (NoSQL), play key roles in storing and managing data.
+
+Conclusion:
+The web infrastructure comprises multiple layers, each contributing to the seamless functioning of the internet. While this overview touches the surface of a complex system, it provides insights into the intricate processes that occur within microseconds when a URL is entered into a browser. 
