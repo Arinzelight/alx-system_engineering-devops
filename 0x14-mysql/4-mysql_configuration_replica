@@ -28,4 +28,4 @@ relay-log               = /var/log/mysql/mysql-relay-bin.log
 bind-address    = 127.0.0.1
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
-"/etc/mysql/mysql.conf.d/mysqld.cnf" 43L, 1770C  
+   
