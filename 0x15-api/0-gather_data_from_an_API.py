@@ -33,11 +33,11 @@ if __name__ == "__main__":
     todos = todos_response.json()
 
     # Filter completed tasks
-    completed = [t.get("title") for t in todos if t.get("completed")]
+    completed_tasks = [t for t in todos if t.get("completed")]
 
     # Print employee todo list progress
     print("Employee {} is done with tasks({}/{}):".format(
-        user.get("name"), len(completed), len(todos)))
-    for c in completed:
-        print("\t{}".format(c))
+        user.get("name"), len(completed_tasks), len(todos)))
+    for task in completed_tasks:
+        print("\t{}".format(task["title"]))
 
