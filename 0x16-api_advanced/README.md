@@ -2,9 +2,7 @@
 
 In this advanced project, I continued to practice querying APIs, this time working specifically with the Reddit API.
 
-## Tests ✔️
 
-- `tests`: Folder containing test files for all tasks, provided by Holberton School.
 
 ## Function Prototypes 💾
 
