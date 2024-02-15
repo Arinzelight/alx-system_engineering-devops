@@ -7,8 +7,8 @@ count_dic = []
 
 
 def count_words(subreddit, word_list):
-    """parses the title of all hot articles, and prints a sorted count of given
-    keywords (case-insensitive, delimited by spaces) """
+    """parses the title of all hot articles, and prints a sorted count"""
+
     global after
     global count_dic
     headers = {'User-Agent': 'xica369'}
@@ -16,4 +16,3 @@ def count_words(subreddit, word_list):
     parameters = {'after': after}
     response = requests.get(url, headers=headers, allow_redirects=False,
                             params=parameters)
-
